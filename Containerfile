@@ -188,14 +188,19 @@ RUN --mount=type=cache,dst=/var/cache \
 
 # Remove unneeded packages
 RUN --mount=type=cache,dst=/var/cache \
-    --mount=type=cache,dst=/var/log \
-    dnf5 -y remove \
-        ublue-os-update-services \
-        firefox \
-        firefox-langpacks \
-        toolbox \
-        htop && \
-    /ctx/cleanup
+  --mount=type=cache,dst=/var/log \
+  dnf5 -y remove \
+  ublue-os-update-services \
+  firefox \
+  firefox-langpacks \
+  toolbox \
+  htop \
+  libreoffice-calc \
+  libreoffice-impress \
+  libreoffice-draw \
+  libreoffice-base \
+  libreoffice-math && \
+  /ctx/cleanup
 
 # Install new packages
 RUN --mount=type=cache,dst=/var/cache \
@@ -278,6 +283,9 @@ RUN --mount=type=cache,dst=/var/cache \
         rocm-clinfo \
         waydroid \
         cage \
+        steam \
+        wine \
+        protontricks \
         wlr-randr && \
     systemctl mask iscsi && \
     mkdir -p /usr/lib/extest/ && \
