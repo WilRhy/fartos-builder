@@ -9,7 +9,7 @@
 <p align="center">
   <a href="https://download.bazzite.gg/"><img src="/repo_content/download.png?raw=true" alt="Download Bazzite"/></a>
 </p>
-
+<p>FartOS is a forked version of Bazzite which uses Fedora and Universal Blue.</p>
 ---
 
 # Table of Contents
